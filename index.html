@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Majestik Bags - Carteras para Damas</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #d429e4;
+            /* Color verde para el encabezado */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: rgb(99, 224, 195);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sección de Inicio */
+        #home {
+            background-color: #e3f2fd;
+            /* Color azul claro */
+            padding: 40px;
+            text-align: center;
+        }
+
+        #home video {
+            margin-top: 20px;
+            border: 5px solid #333;
+        }
+
+        /* Sección Sobre Nosotros */
+        #about {
+            background-color: #ffeb3b;
+            /* Color amarillo */
+            padding: 40px;
+        }
+
+        #about h2 {
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+        }
+
+        /* Sección de Productos */
+        #products {
+            background-color: #ffe0b2;
+            /* Color naranja claro */
+            padding: 40px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #388E3C;
+        }
+
+        /* Sección de Contacto */
+        #contact {
+            background-color: #c8e6c9;
+            /* Color verde claro */
+            padding: 40px;
+            text-align: center;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #contact button:hover {
+            background-color: #388E3C;
+        }
+
+        /* Sección de Políticas de la Tienda */
+        #policies {
+            background-color: #ffcdd2;
+            /* Color rojo claro */
+            padding: 40px;
+            text-align: center;
+        }
+
+        #policies h2 {
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+        }
+
+        /* Sección del Carrito de Compras */
+        #cart {
+            background-color: #d1c4e9;
+            /* Color púrpura claro */
+            padding: 40px;
+            text-align: center;
+        }
+
+        #cart button {
+            background-color: #673AB7;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #cart button:hover {
+            background-color: #512DA8;
+        }
+
+        /* Sección de Redes Sociales */
+        #social {
+            background-color: #f8bbd0;
+            /* Color rosa claro */
+            padding: 40px;
+            text-align: center;
+        }
+
+        #social a {
+            color: #673AB7;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        #social a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sección de Chat en Vivo */
+        #live-chat {
+            background-color: #b2ebf2;
+            /* Color cian claro */
+            padding: 40px;
+            text-align: center;
+        }
+
+        #live-chat button {
+            background-color: #0097A7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #live-chat button:hover {
+            background-color: #00796B;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado con menú de navegación -->
+    <header>
+        <h1>Majestik Bags</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#policies">Políticas de la Tienda</a></li>
+                <li><a href="#cart">Carrito de Compras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="home">
+        <h2>Bienvenido a Majestik Bags</h2>
+        <p>Descubre nuestras exclusivas carteras para damas, diseñadas para la mujer moderna y sofisticada.</p>
+        
+        <iframe width="949" height="534" src="https://www.youtube.com/embed/9lQwkSbLSUY"
+            title="BORSE BOLSOS PARA DAMA | INFOCUS2 AGENCIA DE PUBLICIDAD" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <!-- Sección de Sobre Nosotros -->
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>En Majestik Bags, nos dedicamos a crear carteras que combinan elegancia y funcionalidad. Nuestras colecciones
+            están hechas con los mejores materiales y un diseño pensado en ti. Cada cartera es una obra maestra que
+            refleja nuestra pasión por la moda.</p>
+        <h3>Bibliografía</h3>
+        <p>Con más de 15 años de experiencia en el sector de la moda, hemos trabajado con las marcas más reconocidas y
+            ahora traemos nuestra propia línea de carteras exclusiva.</p>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product">
+            <img src="cartera elegante.jpg" alt="Cartera Elegante">
+            <h3>Cartera Elegante</h3>
+            <p>Precio: S/. 150.00</p>
+            <button>Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="cartera casual.jpg" alt="Cartera Casual">
+            <h3>Cartera Casual</h3>
+            <p>Precio: S/. 120.00</p>
+            <button>Añadir al Carrito</button>
+        </div>
+        <!-- Más productos... -->
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact">
+        <h2>Contáctanos</h2>
+        <form action="enviar.php" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Sección de Políticas de la Tienda -->
+    <section id="policies">
+        <h2>Políticas de la Tienda</h2>
+        <p>Nuestras políticas garantizan una experiencia de compra segura y satisfactoria. Ofrecemos devoluciones y
+            cambios dentro de los primeros 30 días desde la compra.</p>
+    </section>
+
+    <!-- Sección del Carrito de Compras y Pago -->
+    <section id="cart">
+        <h2>Carrito de Compras</h2>
+        <p>No tienes productos en tu carrito.</p>
+        <button>Pagar</button>
+    </section>
+
+    <!-- Integración con redes sociales -->
+    <section id="social">
+        <h2>Síguenos en Redes Sociales</h2>
+        <a href="https://www.facebook.com/majestikbags">Facebook</a> |
+        <a href="https://www.instagram.com/majestikbags">Instagram</a> |
+        <a href="https://www.twitter.com/majestikbags">Twitter</a>
+    </section>
+
+    <!-- Chat en vivo o asistencia en línea -->
+    <section id="live-chat">
+        <h2>Chat en Vivo</h2>
+        <p>¿Tienes alguna duda? ¡Estamos aquí para ayudarte!</p>
+        <button onclick="openChat()">Iniciar Chat</button>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 Majestik Bags. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function openChat() {
+            alert("El chat en vivo se abrirá pronto. Mientras tanto, puedes contactarnos por correo.");
+        }
+    </script>
+</body>
+
+</html>
